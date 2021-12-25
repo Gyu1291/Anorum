@@ -8,7 +8,9 @@ import {
   faTwitter,
   faGoogle,
   faFacebook,
+  faStackExchange,
 } from "@fortawesome/free-brands-svg-icons";
+import { stackExchange } from "fontawesome";
 
 
 <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
@@ -57,18 +59,12 @@ const Auth = () => {
             provider.addScope('email');
         }
         
-        else if(name==='facebook'){
-            provider = new firebaseInstance.auth.FacebookAuthProvider();
-            provider.addScope('profile');
-            provider.addScope('email');
-        }
-
         const data = await signInWithPopup(authService, provider, browserPopupRedirectResolver);
         console.log(data);
     };
 return(
     <div className="authContainer">
-        <FontAwesomeIcon icon={faTwitter} color="#04AAFF" size="3x" style={{marginBottom: 30}} />
+        <FontAwesomeIcon icon={faStackExchange} color="#04AAFF" size="3x" style={{marginBottom: 30}} />
         <form onSubmit={onSubmit} className="container" >
             <input name="email"
             type="text"
@@ -93,7 +89,7 @@ return(
             <button name="google" onClick={onSocialClick} className="authBtn" >
                 Continue with Google <FontAwesomeIcon icon={faGoogle} />
             </button>
-            <button name="facebook" onClick={onSocialClick} className="authBtn" >
+            <button name="facebook" className="authBtn" >
                 Continue with Facebook <FontAwesomeIcon icon={faFacebook} />
             </button>
         </div>

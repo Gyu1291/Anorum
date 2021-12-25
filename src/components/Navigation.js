@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import 'styles.css'
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faTwitter} from '@fortawesome/free-brands-svg-icons'
+import {faStackExchange, faTwitter} from '@fortawesome/free-brands-svg-icons'
 import {faUser} from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = () =>
@@ -11,12 +11,12 @@ const Navigation = () =>
     
     <ul style={{display:'flex', justifyContent: 'center', marginTop: 50} }>
         <li>
-            <Link to="/" style={{marginRight: 30}}>
-                <FontAwesomeIcon icon={faTwitter} color="#04AAFF" size="2x" />
+            <Link to="/" style={{marginRight: 25}}>
+                <FontAwesomeIcon icon={faStackExchange} color="#04AAFF" size="2x" />
             </Link>
         </li>
         <li>
-            <Link to="/profile" style={{marginLeft: 30,
+            <Link to="/profile" style={{marginLeft: 25,
                 display: 'flex',
                 flexDirection:'column',
                 alignItems:'center',
